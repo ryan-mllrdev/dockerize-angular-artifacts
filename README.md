@@ -8,6 +8,7 @@ Notes:
 - Your choice of web server (e.g. Node, IIS, Nginx, Apache)
 
 Checklist:
-Dockerize the angular artifacts
-Run the dockerized app via Docker CLI
-Run the dockerized app via Docker Compose
+* Dockerize the angular artifacts
+* Run the dockerized app via Docker CLI
+* Run the dockerized app via Docker Compose
+
