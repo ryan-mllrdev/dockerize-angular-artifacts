@@ -1,0 +1,9 @@
+<div class="row" style="border-top-style:double;border-width:1px;">
+    <div class="col">{{location.name}}</div>
+    <div class="col" style="text-align: right;">
+        <a [routerLink]="['/locations/edit', location.id]">Edit</a>
+    </div>
+    <div class="col">
+        <a [routerLink]="" style="margin:0.1em;" (click)="confirmDelete(location.id)">Delete</a>
+    </div>
+</div>

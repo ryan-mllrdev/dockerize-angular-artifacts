@@ -1,0 +1,12 @@
+<div class="row" style="border-top-style:double;border-width:1px;">
+    <div class="col">{{product.sku}}</div>
+    <div class="col">{{product.name}}</div>
+    <div class="col">{{product.description}}</div>
+    <div class="col">{{product.supplierName}}</div>
+    <div class="col" style="text-align: right;">
+        <a [routerLink]="['/products/edit', product.id]">Edit</a>
+    </div>
+    <div class="col">
+        <a [routerLink]="" style="margin:0.1em;" (click)="confirmDelete(product.id)">Delete</a>
+    </div>
+</div>

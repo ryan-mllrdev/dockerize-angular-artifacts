@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "sku": "0001",
+        "name": "Laptop 101",
+        "description": "This is a good laptop",
+        "supplierId": 1
+    },
+    {
+        "id": 2,
+        "sku": "0002",
+        "name": "Laptop 102",
+        "description": "This is a good laptop",
+        "supplierId": 1
+    },
+    {
+        "id": 3,
+        "sku": "0003",
+        "name": "Laptop 103",
+        "description": "This is a good laptop",
+        "supplierId": 1
+    },
+    {
+        "id": 4,
+        "sku": "0004",
+        "name": "Laptop 104",
+        "description": "This is a good laptop",
+        "supplierId": 2
+    },
+    {
+        "id": 5,
+        "sku": "0005",
+        "name": "Laptop 105",
+        "description": "This is a good laptop",
+        "supplierId": 2
+    }
+]

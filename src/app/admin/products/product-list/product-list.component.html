@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"><button class="btn btn-primary" [routerLink]="['/products/create']">+</button> PRODUCTS</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchText"
+      name="search">
+  </form>
+</nav>
+<div class="container">
+  <!--Table header-->
+  <div class="row">
+    <div class="col">
+      <h4>SKU</h4>
+    </div>
+    <div class="col">
+      <h4>Name</h4>
+    </div>
+    <div class="col">
+      <h4>Description</h4>
+    </div>
+    <div class="col">
+      <h4>Supplier</h4>
+    </div>
+    <div class="col">&nbsp;</div>
+    <div class="col">&nbsp;</div>
+  </div>
+  <!--Table data-->
+  <ng-template ngFor let-product [ngForOf]="products |filter:searchText">
+    <app-product-list-row [product]="product" (productsUpdated)="getProducts($event)"></app-product-list-row>
+  </ng-template>
+</div>

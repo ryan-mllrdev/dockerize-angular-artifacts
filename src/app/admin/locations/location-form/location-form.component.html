@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header text-center">
+    <h5 class="card-title">{{ location?.id ? "Edit" : "Create" }}</h5>
+  </div>
+  <div class="card-body">
+    <div class="d-flex justify-content-center">
+      <div class="col-md-8">
+        <form [formGroup]="locationForm" (ngSubmit)="saveLocation()">
+          <input type="hidden" [(ngModel)]="location.id" class="form-control" id="id" formControlName="id" />
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="location.name" class="form-control" id="name" formControlName="name" />
+          </div>
+          <button class="btn btn-primary float-right" style="margin: 5px;" [routerLink]="['/locations/']">
+            Cancel
+          </button>
+          <button type="submit" [disabled]="!locationForm.valid" class="btn btn-primary float-right"
+            style="margin: 5px;">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

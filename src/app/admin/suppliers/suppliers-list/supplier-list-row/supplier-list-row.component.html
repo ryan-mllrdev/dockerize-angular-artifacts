@@ -1,0 +1,10 @@
+<div class="row" style="border-top-style:double;border-width:1px;">
+    <div class="col">{{supplier.name}}</div>
+    <div class="col">{{supplier.locationName}}</div>
+    <div class="col" style="text-align: right;">
+        <a [routerLink]="['/suppliers/edit', supplier.id]">Edit</a>
+    </div>
+    <div class="col">
+        <a [routerLink]="" style="margin:0.1em;" (click)="confirmDelete(supplier.id)">Delete</a>
+    </div>
+</div>

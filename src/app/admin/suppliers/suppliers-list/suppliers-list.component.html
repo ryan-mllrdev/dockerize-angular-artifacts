@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"><button class="btn btn-primary" [routerLink]="['/suppliers/create']">+</button> SUPPLIERS</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchText"
+      name="search">
+  </form>
+</nav>
+<div class="container">
+  <!--Table header-->
+  <div class="row">
+    <div class="col">
+      <h4>Name</h4>
+    </div>
+    <div class="col">
+      <h4>Location</h4>
+    </div>
+    <div class="col">&nbsp;</div>
+    <div class="col">&nbsp;</div>
+  </div>
+  <!--Table data-->
+  <ng-template ngFor let-supplier [ngForOf]="suppliers |filter:searchText">
+    <app-supplier-list-row [supplier]="supplier" (suppliersUpdated)="getSuppliers($event)"></app-supplier-list-row>
+  </ng-template>
+</div>
